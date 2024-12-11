@@ -1,0 +1,121 @@
+/* Sidebar Container */
+.sidebar img {
+    width: 35%;
+    object-fit: none;
+    display: block;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #f4f7fc;
+    color: #424242;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    z-index: 100;
+  }
+  
+  /* Sidebar Item */
+  .sidebar-item {
+    width: 100%;
+  }
+  
+  /* Sidebar Header (Main Items) */
+  .sidebar-header {
+    margin-left: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 4px;
+    border-bottom: 1px solid rgb(243, 237, 237);
+  }
+  
+  /* Hover effect on header */
+  .sidebar-header:hover {
+    background-color: #e2effd;
+    color: #3c5b99;
+    transition: background-color 0.3s ease 0.2s, color 0.3s ease 0.2s;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    color: #2b3a67;
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  /* Dropdown List */
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 10px;
+  }
+  
+  /* Dropdown List Item */
+  .dropdown-menu li {
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  /* Hover effect on list items with delay */
+  .dropdown-menu li:hover {
+    background-color: #dde7f6;
+    color: #2b3a67;
+    transition: background-color 0.3s ease 0.2s, color 0.3s ease 0.2s;
+  }
+  
+  /* Chevron Icon (to indicate dropdown) */
+  .chevron {
+    font-size: 14px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Rotate chevron when dropdown is open */
+  .chevron.open {
+    transform: rotate(180deg);
+    color: #2b3a67;
+  }
+  
+  /* Active state for Sidebar Item */
+  .sidebar-item.active {
+    background-color: #dde7f6;
+  }
+  
+  .sidebar-item.active .sidebar-header {
+    font-weight: 700;
+  }
+  
+  /* Sidebar Icons */
+  .sidebar-item svg {
+    margin-right: 10px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect on icons with delay */
+  .sidebar-item:hover svg {
+    color: #3c5b99;
+    transition: color 0.3s ease 0.2s;
+  }
+  @media screen and (max-width:768px) {
+    .sidebar{
+      display: none;
+    }
+  }
